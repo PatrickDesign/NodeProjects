@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <title>Twixt CHAT</title>
+    <style>
+      /** { margin: 0; padding: 0; box-sizing: border-box; }*/
+      /*body { font: 13px Helvetica, Arial; }*/
+      /*form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }*/
+      /*form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }*/
+      /*form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }*/
+      /*#messages { list-style-type: none; margin: 0; padding: 0; }*/
+      /*#messages li { padding: 5px 10px; }*/
+      /*#messages li:nth-child(odd) { background: #eee; }*/
+    </style>
+    
+    <link href="./app.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  
+  </head>
+  <body>
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="formBox">
+              <form id="signInForm">
+                <h5 id="errorMsg"></h5>
+                <h4 class="formTitle">Enter a username!</h4>
+                <input id="userNameForm" type="text" name="userName">
+                <button>Sign in!</button>
+              </form>
+            </div>
+            
+            <div class="row chatRow">
+              <div class="col-sm-4">
+                <div class="well userList">
+                  <h3>Online Users</h3>
+                  <ul class="list-group" id="users"></ul>
+                </div>
+                <button id="newRandColor">New random Color!</button>
+              </div>
+              <div class="col-sm-8">
+                <div class="chatBox">
+                  <h4>Welcome to Twixt Chat, <span id="chatWelcome"></span>!</h4>
+                  <div class="chatWindow">
+                    <ul id="messages"></ul>
+                  </div>
+                  <form action="" id="chatForm">
+                      <input id="message" autocomplete="off" autofocus />
+                      <!--<textarea id="message" rows="3" cols="50"></textarea>-->
+                      <button>Send Message</button> 
+                      <div class="activeTypeBox">
+                        <h6 id='activeType'></h6>
+                      </div>
+                    </form>
+                  </div>
+                  <h4 id="colorIndicator"></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>-->
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="./chat.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="http://chir.ag/projects/ntc/ntc.js"></script>
+  
+
+  </body>
+</html>
